@@ -3,4 +3,4 @@
 
 
 
-![Game](Game.png)
+![Game](game.png)
