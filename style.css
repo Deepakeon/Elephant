@@ -1,0 +1,232 @@
+@font-face {
+    font-family: spac3;
+    src: url(Spac3Techv17Italic-pPLa.ttf);
+}
+@font-face {
+    font-family: Merkur;
+    src: url(Merkur-j147.0tf);
+}
+body, html{
+    padding:0;
+    margin:0; 
+    border: none;
+    overflow: hidden;
+}
+#container{
+    position:absolute;
+    bottom:0%;
+    width:100%;
+    height:30%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content:center;
+    align-items:space-evenly;
+    align-content:center;
+    background: none;
+}
+#one, #two, #three, #four, #five, #six{
+    margin:10px 10px;
+    width:10%;
+    background:rgb(255, 255, 255);
+    border-radius:5px;
+    color: rgb(255, 0, 0);
+    font-family:Spac3;
+    font-size: 50px;
+    border:1px solid black;
+    font-weight:lighter;
+    box-shadow: 2px 4px 5px 5px rgb(0, 0, 0);
+    
+    
+}
+div#container>*:active{
+    transform: translatey(2px);
+
+}
+#containergame{
+    position:absolute;
+    left:0%;
+    top:25%;
+    width:100vw;
+    height:30%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:center;
+    font-family: merkur;
+    z-index:1;
+    font-size: 150px;
+    background-color: none;
+}
+#enemycircle, #playercircle{
+    text-align:center;
+    color:rgb(255, 255, 255);
+    border-radius: 50%;
+    margin:0 0.4em;
+    text-shadow:0px 0px 10px rgb(250, 117, 117), 0px 0px 10px rgb(252, 190, 190), 0px 0px 10px rgb(252, 190, 190);
+}
+#scores{
+    position:absolute;
+    width:100vw ;
+    height:8vh;
+    top:3%;
+    z-index:1;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    left:0;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-family:monospace;
+}
+#box{
+    margin-right:10px;
+    width:10%;
+    border:1px solid white;
+    height:70%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+/*#overlay1{
+    z-index:1;
+    position:absolute;
+    width:16vw;
+    margin-left: 1px;;
+    font-size: 19px;
+    height:5vh;
+    top:4%;
+    left:41%;
+    display: flex;
+    color:white;
+    align-items: center;
+    justify-content: center;
+    border:1px solid white;
+    font-family:monospace;
+    background:none;
+}*/
+#enemy, #player{
+    background-color: rgb(255, 0, 0);
+    margin-right:10px;
+}
+#alerts{
+    position:absolute;
+    color:rgb(255, 0, 0);
+    top:10%;
+    text-align:center;
+    width:100%;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#imagew{
+    position: relative;
+    width:6570px;
+    height:5790px;
+    background-image: url("WorldMap.svg");
+    background-repeat: repeat;
+    background-color: yellow;
+    background-size:auto;
+    animation-name: anim;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    animation-direction: alternate;
+    filter:blur(3px);
+}
+@keyframes anim{
+    from{transform: translateX(0);}
+    to{transform: translateX(-1500px);}
+}
+#prompt{
+    position:fixed;
+    z-index: 90;
+    top:50%;
+    opacity:0;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow:1px 1px 10px 1px black;
+    width:500px;
+    height:300px;
+    background-color: aliceblue;
+}
+#scor{
+    width:100%;
+    height:100%;
+    font-size: 200px;
+    display: flex;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+#restart{
+    position:absolute;
+    font-family:monospace;
+    background-color:red;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    width:20%;
+    height:13%;
+    top:80%;
+    left:40%;
+    border-radius: 5px;
+    border:1px solid red;
+    box-shadow: 1px 1px 1px black;
+    cursor:pointer;
+}
+#restart:active{
+    top:81%;
+}
+@media screen and (max-width:1024px) and (min-width:768px){
+    
+    div#container>*{
+        width:13%;
+    }
+    
+}
+@media screen and (max-width:768px) and (min-width:425px){
+    #box{
+        width:30%;
+
+    }
+    div#container>*{
+        width:30%;
+        height: 40%;
+        margin:5px 5px;
+    }
+    
+    
+}
+@media  screen and (max-width:425px){
+    #scores{
+        height:5vh;
+        font-size:15px;
+    }
+    #box{
+        width:30%;
+    }
+    div#container>*{
+        margin:0px 0px;
+        width:30%;
+        box-shadow:none;
+
+    }
+    #containergame{
+        font-size: 120px;
+    }
+    #prompt{
+        width:80vw;
+        left:50%;
+    }
+    #restart{
+        font-size: small;
+        width:30%;
+        left:35%;
+    }
+    #scor{
+        font-size: 180px;
+    }
+    
+}

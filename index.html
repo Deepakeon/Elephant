@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <link rel = "stylesheet" href = "style.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Game</title>
+</head>
+<body>
+<div id="prompt">
+    <div id="alerts"></div>
+    <div id="scor"></div>
+    <button id="restart" value="" onclick="res()">Restart</button>
+</div>
+<div id="imagew"></div>
+<div id="overlay1">
+
+</div>
+<div id="containergame">
+    <div id="playercircle">0</div>
+    <div id="enemycircle">0</div>
+</div>
+
+<div id="container">
+    <button id = "one" onclick="change(1); updatescore(1);">1</button> 
+    <button id = "two" onclick="change(2); updatescore(2);">2</button>
+    <button id = "three" onclick="change(3); updatescore(3);">3</button>
+    <button id = "four" onclick="change(4); updatescore(4);">4</button>
+    <button id = "five" onclick="change(5); updatescore(5);">5</button>    
+    <button id = "six" onclick="change(6); updatescore(6);">6</button>   
+
+</div>
+
+<div id="scores">
+    <div id="player">Player</div>
+    <div id="box">
+        <div id="scorep">0</div>
+        <div id="symbol">:</div>
+        <div id="scoree">0</div>
+    </div>
+    <div id="enemy">Enemy</div>
+
+</div>
+</body>
+<script type = "text/javascript" src = "main.js"></script>
+</html>
