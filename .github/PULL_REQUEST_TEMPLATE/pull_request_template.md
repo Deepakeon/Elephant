@@ -6,14 +6,9 @@ Provide a short summary in the Title above. Always add the ticket number as the 
 
 -->
 
-## Fix
-Link to ticket:
 <!---
 Mention the ticket number here, and provide the link to the JIRA ticket.
 
-* Fix OM-123
-Link to ticket: https://teamonbo.atlassian.net/browse/OM-123
---> 
 
 ## What has been done
 -
